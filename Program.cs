@@ -2,35 +2,35 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _06.Repainting
+namespace _05.SuppliesforSchool
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // цени
-            double predpazenNylon = 1.5;
-            double pricepaint = 14.50;
-            double razreditelZaBoq = 5;
-            double bags = 0.4;
-            
-            // Input
-            int nylon = int.Parse(Console.ReadLine());
-            int paint = int.Parse(Console.ReadLine());
-            int razreditel = int.Parse(Console.ReadLine());
-            int hours = int.Parse(Console.ReadLine());
+            //•	Пакет химикали - 5.80 лв. 
+            // •	Пакет маркери -7.20 лв.
+            // •	Препарат - 1.20 лв(за литър)
 
+            double paketHimikali = 5.8;
+            double paketMarkeri = 7.2;
+            double preparat = 1.2;
+            //•	Процент намаление -цяло число в интервала[0...100]
+
+            //Input
+            int cenaZaPaketiteHimikali = int.Parse(Console.ReadLine());
+            int cenaZaPaketMarkeri = int.Parse(Console.ReadLine());
+            int cenaZaPreparat = int.Parse(Console.ReadLine());
+            int percent = int.Parse(Console.ReadLine());
             //Calculations
-            double sumForNylon = (nylon + 2) * predpazenNylon;
-            double sumForPaint = (paint + paint * 0.1) * pricepaint;
-            double sumForRazreditel = razreditel * razreditelZaBoq;
-            double sumForBags = bags;
-            double sumAll = sumForBags + sumForPaint + sumForNylon + sumForRazreditel;
-            double sumForMaistori = sumAll * 0.30 * hours;
-            double krainaSuma = sumAll + sumForMaistori;
+            double krainaCenaZaHimikali = paketHimikali * cenaZaPaketiteHimikali;
+            double krainaCenaZaMarkeri = paketMarkeri * cenaZaPaketMarkeri;
+            double krainaCenaZaPreparat = preparat * cenaZaPreparat;
+            double sumForAllMaterials = krainaCenaZaHimikali + krainaCenaZaMarkeri + krainaCenaZaPreparat;
+            double sumWithDiscount = sumForAllMaterials - (sumForAllMaterials * percent / 100);
 
             // Output
-            Console.WriteLine(krainaSuma);
+            Console.WriteLine(sumWithDiscount);
 
 
         }
