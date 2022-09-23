@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Concatenate_Data
+namespace _09.FishTank
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string firstName = Console.ReadLine();
-            string secondName = Console.ReadLine();
-            int age = int.Parse(Console.ReadLine());
-            string city = (Console.ReadLine());
+            // Input 
+            int duljinaCM = int.Parse(Console.ReadLine());
+            int shirochinaCM = int.Parse(Console.ReadLine());
+            int visochinaCM = int.Parse(Console.ReadLine());
+            double percent = double.Parse(Console.ReadLine());
+            // Calculations
+            double obemNaAkvarium = duljinaCM * shirochinaCM * visochinaCM;
+            double obemLitres = obemNaAkvarium / 1000;
+            double nujniLitri = obemLitres * (1 - percent / 100);
 
-            Console.WriteLine($"You are {firstName} {secondName}, a {age}-years old person from {city}.");
+
+            // Output 
+            Console.WriteLine(nujniLitri);
         }
     }
 }
