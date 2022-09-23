@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _09.Yard_Greening
+namespace _08.BasketballEquipment
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Reading the input from user
-            double size = double.Parse(Console.ReadLine());
-            double priceWithoutDiscount = size * 7.61;
-            double discount = priceWithoutDiscount * 0.18;
-
-            Console.WriteLine($"The final price is: {priceWithoutDiscount - discount} lv.");
-            Console.WriteLine($"The discount is: {discount} lv. ");
+            // input
+            int cenaZaGodina = int.Parse(Console.ReadLine());
+            // Calculations
+            double cenaNaTrenirovkiteGodina = cenaZaGodina;
+            double cenaNaKecove = cenaZaGodina * 0.60;
+            double basketballEkip = cenaNaKecove * 0.80;
+            double cenaNaBasketballTopka = basketballEkip / 4;
+            double cenaNaBasketballAccsessoaries = cenaNaBasketballTopka / 5;
+            double sumForEquipment = cenaNaTrenirovkiteGodina + cenaNaKecove + basketballEkip + cenaNaBasketballTopka + cenaNaBasketballAccsessoaries;
+            // Output
+            Console.WriteLine(sumForEquipment);
 
         }
     }
