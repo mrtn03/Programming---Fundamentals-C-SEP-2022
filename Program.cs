@@ -2,33 +2,37 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _07.FoodDelivery
+namespace _06.Repainting
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // danni
-            double pileshkoMenu = 10.35;
-            double menuRiba = 12.40;
-            double vegetarianskoMenu = 8.15;
-            double cenaZaDostavka = 2.5;
-
+            // цени
+            double predpazenNylon = 1.5;
+            double pricepaint = 14.50;
+            double razreditelZaBoq = 5;
+            double bags = 0.4;
+            
             // Input
-            int broiPileshkiMenuta = int.Parse(Console.ReadLine());
-            int broiMenutaRiba = int.Parse(Console.ReadLine());
-            int vegetarianskiMenutabroi = int.Parse(Console.ReadLine());
+            int nylon = int.Parse(Console.ReadLine());
+            int paint = int.Parse(Console.ReadLine());
+            int razreditel = int.Parse(Console.ReadLine());
+            int hours = int.Parse(Console.ReadLine());
 
             //Calculations
-            double cenaZaPileshkiMenuta = broiPileshkiMenuta * pileshkoMenu;
-            double cenaZaMenutaRiba = broiMenutaRiba * menuRiba;
-            double cenaZaVegetarianskiMenuta = vegetarianskiMenutabroi * vegetarianskoMenu;
-            double sumMenu = cenaZaMenutaRiba + cenaZaPileshkiMenuta + cenaZaVegetarianskiMenuta;
-            double sumDesert = sumMenu * 0.20;
-            double dostavkaCena = cenaZaDostavka;
-            double obshtaCenaNaDostavkata = sumMenu + sumDesert + dostavkaCena;
+            double sumForNylon = (nylon + 2) * predpazenNylon;
+            double sumForPaint = (paint + paint * 0.1) * pricepaint;
+            double sumForRazreditel = razreditel * razreditelZaBoq;
+            double sumForBags = bags;
+            double sumAll = sumForBags + sumForPaint + sumForNylon + sumForRazreditel;
+            double sumForMaistori = sumAll * 0.30 * hours;
+            double krainaSuma = sumAll + sumForMaistori;
+
             // Output
-            Console.WriteLine(obshtaCenaNaDostavkata);
+            Console.WriteLine(krainaSuma);
+
+
         }
     }
 }
