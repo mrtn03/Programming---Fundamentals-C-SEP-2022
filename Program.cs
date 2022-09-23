@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace USD_към_BGN
+namespace Rectangle_Area
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double usd = double.Parse(Console.ReadLine());
-            double bgn = usd * 1.79549;
-            Console.WriteLine(bgn);
-        }
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int result = a * b;
+            Console.WriteLine(result);
+          }
     }
 }
