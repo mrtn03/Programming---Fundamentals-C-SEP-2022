@@ -2,24 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _08.BasketballEquipment
+namespace _08.Pet_Shop
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // input
-            int cenaZaGodina = int.Parse(Console.ReadLine());
-            // Calculations
-            double cenaNaTrenirovkiteGodina = cenaZaGodina;
-            double cenaNaKecove = cenaZaGodina * 0.60;
-            double basketballEkip = cenaNaKecove * 0.80;
-            double cenaNaBasketballTopka = basketballEkip / 4;
-            double cenaNaBasketballAccsessoaries = cenaNaBasketballTopka / 5;
-            double sumForEquipment = cenaNaTrenirovkiteGodina + cenaNaKecove + basketballEkip + cenaNaBasketballTopka + cenaNaBasketballAccsessoaries;
-            // Output
-            Console.WriteLine(sumForEquipment);
+            int dogFoodCount = int.Parse(Console.ReadLine());
+            int catFoodCount = int.Parse(Console.ReadLine());
+            double singleDogFoodPrice = 2.5;
+            double singleCatFoodPrice = 4;
 
+            double totalPriceForDogFood = dogFoodCount * singleDogFoodPrice;
+            double totalPriceForCatFood = catFoodCount * singleCatFoodPrice;
+            double totalPrice =  totalPriceForDogFood + totalPriceForCatFood;
+            Console.WriteLine($" {totalPrice} lv.");
         }
     }
 }
