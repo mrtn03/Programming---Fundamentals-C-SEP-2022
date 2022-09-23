@@ -1,24 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace _04.VacationBooksList
+namespace _03.DepositCalculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 1.	Брой страници в текущата книга – цяло число в интервала [1…1000]
-            // 2.Страници, които прочита за 1 час – цяло число в интервала[1…1000]
-            // 3.Броят на дните, за които трябва да прочете книгата – цяло число в интервала[1…1000]
-
-            // Input
-            int broiStraniciKniga = int.Parse(Console.ReadLine());
-            int straniciZaChas = int.Parse(Console.ReadLine());
-            int broqNaDniteZaKoitoTrqbvaDaProcheteKnigata = int.Parse(Console.ReadLine());
+            /*1.Депозирана сума – реално число в интервала[100.00 … 10000.00]
+2.Срок на депозита(в месеци) – цяло число в интервала[1…12]
+3.Годишен лихвен процент – реално число в интервала[0.00 …100.00]
+            сума = депозирана сума  + срок на депозита * ((депозирана сума * годишен лихвен процент ) / 12)
+*/
+            // INPUT
+            int depositSUM = int.Parse(Console.ReadLine());
+            int depositMonths = int.Parse(Console.ReadLine());
+            double percent = double.Parse(Console.ReadLine());
             // Calculations
-            int timeForRead = broiStraniciKniga / straniciZaChas;
-            int neobhodimiChasoveNaDen = timeForRead / broqNaDniteZaKoitoTrqbvaDaProcheteKnigata;
-            // Output
-            Console.WriteLine(neobhodimiChasoveNaDen);
+            double lihva = depositSUM * percent / 100;
+            double lihvaZaMesec = lihva / 12;
+            double SUM = depositSUM + depositMonths * lihvaZaMesec;
+            //Output
+            Console.WriteLine(SUM);
+
         }
     }
 }
