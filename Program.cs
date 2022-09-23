@@ -2,25 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _09.FishTank
+namespace _09.Yard_Greening
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Input 
-            int duljinaCM = int.Parse(Console.ReadLine());
-            int shirochinaCM = int.Parse(Console.ReadLine());
-            int visochinaCM = int.Parse(Console.ReadLine());
-            double percent = double.Parse(Console.ReadLine());
-            // Calculations
-            double obemNaAkvarium = duljinaCM * shirochinaCM * visochinaCM;
-            double obemLitres = obemNaAkvarium / 1000;
-            double nujniLitri = obemLitres * (1 - percent / 100);
+            // Reading the input from user
+            double size = double.Parse(Console.ReadLine());
+            double priceWithoutDiscount = size * 7.61;
+            double discount = priceWithoutDiscount * 0.18;
 
+            Console.WriteLine($"The final price is: {priceWithoutDiscount - discount} lv.");
+            Console.WriteLine($"The discount is: {discount} lv. ");
 
-            // Output 
-            Console.WriteLine(nujniLitri);
         }
     }
 }
