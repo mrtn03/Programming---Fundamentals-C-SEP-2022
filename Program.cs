@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Greeting_by_Name
+namespace Concatenate_Data
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string name = Console.ReadLine();
-            Console.WriteLine("Hello, " + name + "!");
+            string firstName = Console.ReadLine();
+            string secondName = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());
+            string city = (Console.ReadLine());
+
+            Console.WriteLine($"You are {firstName} {secondName}, a {age}-years old person from {city}.");
         }
     }
 }
