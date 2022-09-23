@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-
-namespace Hello_SoftUni
+namespace Greeting_by_Name
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello SoftUni");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, " + name + "!");
         }
     }
 }
