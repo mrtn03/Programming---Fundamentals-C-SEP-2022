@@ -2,21 +2,33 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _08.Pet_Shop
+namespace _07.FoodDelivery
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int dogFoodCount = int.Parse(Console.ReadLine());
-            int catFoodCount = int.Parse(Console.ReadLine());
-            double singleDogFoodPrice = 2.5;
-            double singleCatFoodPrice = 4;
+            // danni
+            double pileshkoMenu = 10.35;
+            double menuRiba = 12.40;
+            double vegetarianskoMenu = 8.15;
+            double cenaZaDostavka = 2.5;
 
-            double totalPriceForDogFood = dogFoodCount * singleDogFoodPrice;
-            double totalPriceForCatFood = catFoodCount * singleCatFoodPrice;
-            double totalPrice =  totalPriceForDogFood + totalPriceForCatFood;
-            Console.WriteLine($" {totalPrice} lv.");
+            // Input
+            int broiPileshkiMenuta = int.Parse(Console.ReadLine());
+            int broiMenutaRiba = int.Parse(Console.ReadLine());
+            int vegetarianskiMenutabroi = int.Parse(Console.ReadLine());
+
+            //Calculations
+            double cenaZaPileshkiMenuta = broiPileshkiMenuta * pileshkoMenu;
+            double cenaZaMenutaRiba = broiMenutaRiba * menuRiba;
+            double cenaZaVegetarianskiMenuta = vegetarianskiMenutabroi * vegetarianskoMenu;
+            double sumMenu = cenaZaMenutaRiba + cenaZaPileshkiMenuta + cenaZaVegetarianskiMenuta;
+            double sumDesert = sumMenu * 0.20;
+            double dostavkaCena = cenaZaDostavka;
+            double obshtaCenaNaDostavkata = sumMenu + sumDesert + dostavkaCena;
+            // Output
+            Console.WriteLine(obshtaCenaNaDostavkata);
         }
     }
 }
